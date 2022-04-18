@@ -43,8 +43,22 @@ outline: 2px solid red;
 /* HEADER */
 .header {
 background: #FFFFFF;
+padding-top: 24px;
+padding-bottom: 25px;
+}
+.header .container {
+display: flex;
+align-items: center;
 }
 
+.nav-header {
+    display: flex;
+}
+
+
+.header-items:not(last-child) {
+    margin-right: 50px;
+}
 .header-logo {
 font-family: 'Raleway', sans-serif;
 font-weight: 700;
@@ -52,6 +66,7 @@ font-size: 26px;
 line-height: 1.19;
 letter-spacing: 0.03em;
 color: var(--brand-color);
+margin-right: 93px;
 }
 
 .second-part-logo {
@@ -78,6 +93,9 @@ color: var(--brand-color);
 .list {
 list-style: none;
 }
+.header-connect {
+margin-left: auto;
+}
 
 .header-mail {
 font-weight: 500;
@@ -93,6 +111,7 @@ font-size: 14px;
 line-height: 1.14;
 letter-spacing: 0.02em;
 color: #757575;
+margin-left: 50px;
 }
 
 /* MAIN */
@@ -138,51 +157,63 @@ margin: 0 auto;
     padding-bottom: 94px;
 }
 
+.benefits-list {
+    display: flex;
+    justify-content: space-between;
+}
+
 .title-benefit {
-font-weight: 700;
-font-size: 14px;
-line-height: 1.14;
-letter-spacing: 0.03em;
-text-transform: uppercase;
-color: #212121;
-padding-bottom: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #212121;
+    padding-bottom: 10px;
 }
 
 .text-benefit {
-font-weight: 400;
-font-size: 14px;
-line-height: 1.71;
-letter-spacing: 0.03em;
-color: #757575;
-max-width: 270px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: #757575;
+    max-width: 270px;
 }
 
 .directions {
-font-size: 36px;
-line-height: 1.17;
-text-align: center;
-letter-spacing: 0.03em;
-color: #212121;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
 }
 
 /* TEAM */
 .team {
-background: #F5F4FA;
-padding-top: 94px;
-padding-bottom: 50px;
+    background: #F5F4FA;
+    padding-top: 94px;
+    padding-bottom: 50px;
 }
 
 .title-team {
-font-weight: 700;
-font-size: 36px;
-line-height: 1.17;
-text-align: center;
-letter-spacing: 0.03em;
-color: #212121;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+    margin-bottom: 50px;
 }
 
-.member-photo {
-  margin-top: 50px;
+.photos-work {
+    display: flex;
+    justify-content: space-between;
+}
+
+.members {
+    display: flex;
+    justify-content: space-between;
 }
 
 .members-name {
@@ -196,13 +227,13 @@ color: #212121;
 }
 
 .members-position {
-font-weight: 400;
-font-size: 16px;
-line-height: 1.19;
-text-align: center;
-letter-spacing: 0.03em;
-color: #757575;
-margin-top: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #757575;
+    margin-top: 10px;
 }
 
 .directions {
@@ -249,22 +280,52 @@ letter-spacing: 0.03em;
 color: rgba(255, 255, 255, 0.6);
 }
 
+.footer-items:last-child {
+    margin-top: 9px;
+    }
+
 /* PORTFOLIO */
+
 .visually-hidden {
-position: absolute;
-white-space: nowrap;
-width: 1px;
-height: 1px;
-overflow: hidden;
-border: 0;
-padding: 0;
-clip: rect(0 0 0 0);
-clip-path: inset(50%);
-margin: -1px;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+.gallery {
+    margin-top: 94px;
+}
+
+.portfolio-projects {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 94px;
+    margin-left: -30px;
+}
+
+.portfolio-projects-items {
+    width: calc(100%/3-30px);
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+.port-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 34px;
+}
+.port-nav .list {
+    margin-left: 8px;
 }
 
 .port-nav-btn {
-    background-color: var(--brand-color);
     border-style: none;
     border-radius: 4px;
     font-family: inherit;
@@ -273,22 +334,28 @@ margin: -1px;
     line-height: 1.62;  
     text-align: center;  
     letter-spacing: 0.03em;  
-    cursor: pointer;  
-    color: #FFFFFF;
+    cursor: pointer;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background: transparent;
+    background-color: transparent;
 }
 
 .title-port-img {
-font-weight: 700;
-font-size: 18px;
-line-height: 2.00;
-letter-spacing: 0.06em;
-color: #212121;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2.00;
+    letter-spacing: 0.06em;
+    color: #212121;
+    margin-left: 24px;
+    margin-bottom: 4px;
+    margin-top: 20px;
 }
 
 .type-port-img {
-font-weight: 400;
-font-size: 16px;
-line-height: 1.88;
-letter-spacing: 0.03em;
-color: #757575;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+    color: #757575;
+    margin-left: 24px;
 }
